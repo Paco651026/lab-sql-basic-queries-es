@@ -12,7 +12,7 @@ select * from customer;
 select title from film;
 
 -- Lista de idiomas usados en las películas, con la columna renombrada como language desde la tabla language
-select name as language from language;
+select distinct l.name as language from film f left join language l on f.language_id=l.language_id;
 
 -- Lista de nombres de pila de todos los empleados de la tabla staff
 select first_name from staff;
